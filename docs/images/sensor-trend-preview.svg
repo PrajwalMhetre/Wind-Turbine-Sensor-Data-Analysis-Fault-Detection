@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+<title id="title">Illustrative synthetic sensor trend</title><desc id="desc">Preview chart showing vibration and temperature trend lines with synthetic sample data.</desc>
+<rect width="960" height="420" rx="18" fill="#0b1220"/><text x="48" y="48" fill="#f1f5f9" font-family="Arial,sans-serif" font-size="24" font-weight="700">Sensor Trend — Preview</text><text x="48" y="76" fill="#94a3b8" font-family="Arial,sans-serif" font-size="14">Synthetic illustration · not real turbine measurements</text>
+<g stroke="#334155" stroke-width="1"><path d="M90 120H900 M90 180H900 M90 240H900 M90 300H900 M90 360H900"/><path d="M90 110V360H900"/></g>
+<g fill="#94a3b8" font-family="Arial,sans-serif" font-size="12"><text x="42" y="124">12</text><text x="42" y="184">9</text><text x="42" y="244">6</text><text x="42" y="304">3</text><text x="42" y="364">0</text><text x="90" y="390">00:00</text><text x="290" y="390">06:00</text><text x="490" y="390">12:00</text><text x="690" y="390">18:00</text><text x="860" y="390">24:00</text></g>
+<path d="M90 290 L150 278 L210 282 L270 265 L330 270 L390 252 L450 260 L510 210 L570 225 L630 165 L690 190 L750 130 L810 150 L870 110 L900 125" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M90 320 L150 316 L210 312 L270 315 L330 305 L390 310 L450 302 L510 290 L570 294 L630 280 L690 286 L750 260 L810 265 L870 245 L900 250" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<g font-family="Arial,sans-serif" font-size="14"><rect x="690" y="90" width="12" height="12" rx="3" fill="#38bdf8"/><text x="710" y="101" fill="#e2e8f0">Vibration (mm/s)</text><rect x="690" y="112" width="12" height="12" rx="3" fill="#fbbf24"/><text x="710" y="123" fill="#e2e8f0">Temperature (scaled)</text></g>
+</svg>
