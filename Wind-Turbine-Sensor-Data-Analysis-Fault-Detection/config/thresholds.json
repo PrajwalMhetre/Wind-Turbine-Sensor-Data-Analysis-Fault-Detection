@@ -1,0 +1,40 @@
+{
+  "_disclaimer": "Illustrative engineering thresholds for proof-of-concept demonstration only. Not universal OEM wind turbine specifications.",
+  "rules": {
+    "high_vibration_mm_s": 10.0,
+    "high_temperature_c": 90.0,
+    "low_power_wind_speed_min_mps": 8.0,
+    "low_power_output_max_kw": 200.0,
+    "rotor_speed_operating_min_rpm": 4.0,
+    "rotor_speed_operating_max_rpm": 22.0,
+    "operating_statuses": ["OPERATING"]
+  },
+  "anomaly_detection": {
+    "rolling_window": 30,
+    "min_periods": 10,
+    "z_threshold": 3.5,
+    "monitored_columns": [
+      "temperature_c",
+      "vibration_mm_s",
+      "rotor_speed_rpm",
+      "power_kw"
+    ],
+    "epsilon": 0.5,
+    "exclude_out_of_range_from_baseline": true
+  },
+  "preprocessing": {
+    "duplicate_timestamp_strategy": "keep_first",
+    "missing_value_strategy": "retain",
+    "ffill_limit": 0
+  },
+  "sensor_limits": {
+    "wind_speed_mps": { "min": 0.0, "max": 50.0, "unit": "m/s" },
+    "rotor_speed_rpm": { "min": 0.0, "max": 35.0, "unit": "RPM" },
+    "generator_speed_rpm": { "min": 0.0, "max": 2500.0, "unit": "RPM" },
+    "temperature_c": { "min": -30.0, "max": 150.0, "unit": "C" },
+    "vibration_mm_s": { "min": 0.0, "max": 50.0, "unit": "mm/s" },
+    "power_kw": { "min": -50.0, "max": 3500.0, "unit": "kW" },
+    "torque_nm": { "min": -500.0, "max": 25000.0, "unit": "Nm" },
+    "pitch_angle_deg": { "min": -5.0, "max": 95.0, "unit": "deg" }
+  }
+}

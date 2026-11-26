@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "generated_at_utc": "2026-11-26T03:58:01.598943+00:00",
+    "input_file": "/working_dir/c_cb528a13594ab862/Wind-Turbine-Sensor-Data-Analysis-Fault-Detection/data/raw/wind_turbine_sensor_data.csv",
+    "data_origin": "Synthetic demonstration dataset (unless replaced with real SCADA CSV)",
+    "thresholds_disclaimer": "Configured thresholds are illustrative engineering assumptions, not universal OEM specs.",
+    "time_range_start": "2026-01-15T00:00:00",
+    "time_range_end": "2026-01-15T23:59:00",
+    "records_analyzed": 1440
+  },
+  "data_quality": {
+    "total_rows": 1442,
+    "valid_timestamp_rows": 1442,
+    "invalid_timestamp_rows": 0,
+    "duplicate_timestamp_count": 2,
+    "duplicate_timestamps": [
+      "2026-01-15T03:20:00",
+      "2026-01-15T10:00:00"
+    ],
+    "missing_values_per_column": {
+      "timestamp": 0,
+      "wind_speed_mps": 3,
+      "rotor_speed_rpm": 0,
+      "generator_speed_rpm": 0,
+      "temperature_c": 3,
+      "vibration_mm_s": 3,
+      "power_kw": 3,
+      "torque_nm": 0,
+      "pitch_angle_deg": 0,
+      "status": 0
+    },
+    "total_missing_values": 12,
+    "non_numeric_coercions_per_column": {
+      "wind_speed_mps": 0,
+      "rotor_speed_rpm": 0,
+      "generator_speed_rpm": 0,
+      "temperature_c": 0,
+      "vibration_mm_s": 0,
+      "power_kw": 0,
+      "torque_nm": 0,
+      "pitch_angle_deg": 0
+    },
+    "out_of_range_counts_per_column": {
+      "wind_speed_mps": 1,
+      "rotor_speed_rpm": 0,
+      "generator_speed_rpm": 0,
+      "temperature_c": 1,
+      "vibration_mm_s": 1,
+      "power_kw": 1,
+      "torque_nm": 0,
+      "pitch_angle_deg": 0
+    },
+    "total_out_of_range_readings": 4,
+    "is_valid_schema": true,
+    "notes": [
+      "Detected 2 duplicate timestamp record(s) across 2 unique timestamp(s).",
+      "Column 'wind_speed_mps' has 1 reading(s) outside configured physical limits [0.0, 50.0] m/s.",
+      "Column 'temperature_c' has 1 reading(s) outside configured physical limits [-30.0, 150.0] C.",
+      "Column 'vibration_mm_s' has 1 reading(s) outside configured physical limits [0.0, 50.0] mm/s.",
+      "Column 'power_kw' has 1 reading(s) outside configured physical limits [-50.0, 3500.0] kW."
+    ]
+  },
+  "preprocessing": {
+    "rows_before": 1442,
+    "rows_after": 1440,
+    "invalid_timestamps_dropped": 0,
+    "duplicates_removed": 2,
+    "values_imputed": 0,
+    "actions_taken": [
+      "Sorted records chronologically by timestamp.",
+      "Removed 2 duplicate timestamp row(s) using strategy 'keep_first'.",
+      "Retained missing sensor values as NaN ('retain' policy) to avoid masking sensor dropouts."
+    ]
+  },
+  "rule_based_faults": {
+    "total_faulty_timestamps": 184,
+    "total_fault_events": 211,
+    "simultaneous_fault_timestamps": 27,
+    "counts_by_category": {
+      "HIGH_VIBRATION": 70,
+      "HIGH_TEMPERATURE": 71,
+      "LOW_POWER_OUTPUT": 41,
+      "ABNORMAL_ROTOR_SPEED": 25,
+      "SENSOR_RANGE_VIOLATION": 4
+    },
+    "counts_by_severity": {
+      "CRITICAL": 94,
+      "HIGH": 3,
+      "WARNING": 87,
+      "NONE": 1256
+    },
+    "configured_thresholds": {
+      "high_vibration_mm_s": 10.0,
+      "high_temperature_c": 90.0,
+      "low_power_wind_speed_min_mps": 8.0,
+      "low_power_output_max_kw": 200.0,
+      "rotor_speed_operating_min_rpm": 4.0,
+      "rotor_speed_operating_max_rpm": 22.0
+    }
+  },
+  "statistical_anomalies": {
+    "rolling_window": 30,
+    "min_periods": 10,
+    "z_threshold": 3.5,
+    "monitored_columns": [
+      "temperature_c",
+      "vibration_mm_s",
+      "rotor_speed_rpm",
+      "power_kw"
+    ],
+    "total_anomalous_rows": 192,
+    "anomalous_rows_per_sensor": {
+      "temperature_c": 65,
+      "vibration_mm_s": 56,
+      "rotor_speed_rpm": 56,
+      "power_kw": 55
+    },
+    "max_observed_score": 100.8933,
+    "note": "Statistical anomalies indicate unusual behavior relative to recent causal rolling baselines and are NOT confirmed mechanical failures."
+  },
+  "generated_figures": [
+    "01_wind_speed_vs_power.png",
+    "02_vibration_trend.png",
+    "03_temperature_trend.png",
+    "04_rotor_speed_trend.png",
+    "05_fault_detection_timeline.png",
+    "06_sensor_overview_dashboard.png",
+    "07_anomaly_score_trend.png"
+  ]
+}
