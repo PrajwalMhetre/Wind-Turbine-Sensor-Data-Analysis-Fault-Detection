@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+<title id="title">Illustrative fault event timeline</title><desc id="desc">Synthetic event bars for vibration, temperature, and low power categories.</desc>
+<rect width="960" height="360" rx="18" fill="#0b1220"/><text x="48" y="48" fill="#f1f5f9" font-family="Arial,sans-serif" font-size="24" font-weight="700">Fault Event Timeline — Preview</text><text x="48" y="76" fill="#94a3b8" font-family="Arial,sans-serif" font-size="14">Synthetic event windows · categories are examples only</text>
+<g stroke="#334155"><path d="M210 120H900 M210 180H900 M210 240H900 M210 300H900"/></g>
+<g fill="#cbd5e1" font-family="Arial,sans-serif" font-size="15"><text x="48" y="150">High vibration</text><text x="48" y="210">High temperature</text><text x="48" y="270">Low power</text></g>
+<g fill="#94a3b8" font-family="Arial,sans-serif" font-size="12"><text x="210" y="330">00:00</text><text x="370" y="330">06:00</text><text x="530" y="330">12:00</text><text x="690" y="330">18:00</text><text x="860" y="330">24:00</text></g>
+<g><rect x="305" y="132" width="70" height="24" rx="5" fill="#f87171"/><rect x="520" y="132" width="110" height="24" rx="5" fill="#f87171"/><rect x="720" y="132" width="95" height="24" rx="5" fill="#f87171"/>
+<rect x="430" y="192" width="120" height="24" rx="5" fill="#fbbf24"/><rect x="660" y="192" width="80" height="24" rx="5" fill="#fbbf24"/>
+<rect x="260" y="252" width="90" height="24" rx="5" fill="#38bdf8"/><rect x="580" y="252" width="145" height="24" rx="5" fill="#38bdf8"/></g>
+</svg>
